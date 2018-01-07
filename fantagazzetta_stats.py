@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup
 from requests import get
 import pandas as pd
+import os
+import errno
+
 
 # constants from FG HTML
 FG_BONUSES = {"gol subito": -1,
@@ -452,8 +455,9 @@ def ICDQCMAS_table(lineups, mantra=True):
             l.result = "Pareggio"
     return lineups
 
+
 # creates pandas data frame and writes lineups to .csv
-def lineups_pandas(lineups, league):
+def lineups_pandas(lineups, league, directory):
     # append lineups to pandas dataframe
     df = pd.DataFrame({"Modulo": [l.modulo for l in lineups],
                        "Modulo applicato": [l.modulo_applicato for l in lineups],
@@ -472,11 +476,11 @@ def lineups_pandas(lineups, league):
                        "Rigore sbagliato": [l.get_bonus("rigore sbagliato") for l in lineups],
                        "Rigore parato": [l.get_bonus("rigore parato") for l in lineups],
                        "Malus": [l.get_bonus("malus") for l in lineups]})
-    df.to_csv("lineups_{}.csv".format(league), sep=",")
+    df.to_csv(directory + "lineups_{}.csv".format(league), sep=",")
 
 
 # creates pandas data frame and writes matches to .csv
-def matches_pandas(matches, league):
+def matches_pandas(matches, league, directory):
     # append matches to pandas dataframe
     df = pd.DataFrame({"Modulo casa": [m.home_modulo for m in matches],
                        "Modulo applicato casa": [m.home_modulo_applicato for m in matches],
@@ -513,7 +517,15 @@ def matches_pandas(matches, league):
                        "Rigore parato fuori casa": [m.get_bonus(m.away_players, "rigore parato") for m in matches],
                        "Malus casa": [m.get_bonus(m.home_players, "malus") for m in matches],
                        "Malus fuori casa": [m.get_bonus(m.away_players, "malus") for m in matches]})
-    df.to_csv("matches_{}.csv".format(league), sep=",")
+    df.to_csv(directory + "matches_{}.csv".format(league), sep=",")
+
+
+def make_sure_path_exists(path):
+    try:
+        os.makedirs(path)
+    except OSError as exception:
+        if exception.errno != errno.EEXIST:
+            raise
 
 
 def main():
@@ -541,11 +553,13 @@ def main():
             matches.append(parse_match(match, lineups))
         raw_data.close()
     # write data to .csv
-    matches_pandas(matches, league)
-    lineups_pandas(lineups, league)
+    directory = os.getcwd() + "/csvs/"
+    make_sure_path_exists(directory)
+    matches_pandas(matches, league, directory)
+    lineups_pandas(lineups, league, directory)
     # calculates and prints table based on best lineups, instead of actual lineups
     best_lineups = ICDQCMAS_table(lineups, mantra)
-    lineups_pandas(best_lineups, "ICDQCMAS_table_" + league)
+    lineups_pandas(best_lineups, "ICDQCMAS_table_" + league, directory)
     # print best lineups
     # print_best_lineups(lineups)
 

@@ -49,6 +49,7 @@ ICDQCMAS <- function(df, df2) {
 
 ekstraklasa <- ICDQCMAS(ekstraklasa, ICDQCMAS_ekstraklasa)
 seriea <- ICDQCMAS(seriea, ICDQCMAS_seriea)
+classic <- ICDQCMAS(classic, ICDQCMAS_classic)
 
 # sum all values for each team
 library(plyr)
@@ -92,6 +93,7 @@ table.fg <- function(df){
 
 ekstraklasa.table <- table.fg(ekstraklasa.vertical)
 seriea.table <- table.fg(seriea.vertical)
+classic.table <- table.fg(classic.vertical)
 
 # offense scatterplot
 scatter.goal <- function(df) {
