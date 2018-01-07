@@ -15,7 +15,7 @@ FG_BONUSES = {"gol subito": -1,
               "rigore parato": 3,
               "autorete": -3}
 
-MODULI = {
+MODULIMANTRA = {
     "343": [["Por"], ["Dc"], ["Dc"], ["Dc"],
             ["E"], ["E"], ["M", "C"], ["M", "C"],
             ["W", "A"], ["W", "A"], ["Pc", "A"]],
@@ -49,6 +49,30 @@ MODULI = {
     "4222": [["Por"], ["Ds"], ["Dc"], ["Dc"],
              ["Dd"], ["M"], ["M"],
              ["W"], ["T"], ["Pc", "A"], ["A"]]
+}
+
+MODULICLASSIC = {
+    "343": [["P"], ["D"], ["D"], ["D"],
+            ["C"], ["C"], ["C"], ["C"],
+            ["A"], ["A"], ["A"]],
+    "352": [["P"], ["D"], ["D"], ["D"],
+            ["C"], ["C"], ["C"], ["C"], ["C"],
+            ["A"], ["A"]],
+    "442": [["P"], ["D"], ["D"], ["D"],
+            ["D"], ["C"], ["C"], ["C"],
+            ["C"], ["A"], ["A"]],
+    "433": [["P"], ["D"], ["D"], ["D"],
+            ["D"], ["C"], ["C"],
+            ["C"], ["A"], ["A"], ["A"]],
+    "451": [["P"], ["D"], ["D"], ["D"],
+            ["D"], ["C"], ["C"],
+            ["C"], ["C"], ["C"], ["A"]],
+    "532": [["P"], ["D"], ["D"], ["D"],
+            ["D"], ["D"], ["C"],
+            ["C"], ["C"], ["A"], ["A"]],
+    "541": [["P"], ["D"], ["D"], ["D"],
+            ["D"], ["D"], ["C"],
+            ["C"], ["C"], ["C"], ["A"]]
 }
 
 
@@ -325,13 +349,14 @@ def find_role_malus(role, modulo):
 
 
 # finds best player for given modulo
-def best11(lineup, modulo):
+def best11(lineup, modulo, mantra):
     best_names = []
     best_roles = []
     best_players = []
     players = [
         p for p in lineup.players if p.fantavoto is not None and p.fantavoto > 0]
     total = 0.0
+    max_malus = 0
     for roles in modulo:
         highest = fg_player()
         # each role can have multiple roles, e.g. M/C
@@ -343,7 +368,7 @@ def best11(lineup, modulo):
                     if r in role and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                         highest = player
         # if no player fills role, apply malus
-        if highest.fantavoto is None or highest.fantavoto == 0:
+        if highest.fantavoto is None or highest.fantavoto == 0 and max_malus < 3 and mantra:
             for role in roles:
                 # finds roles that can be filled with a malus
                 for r_malus in find_role_malus(role, modulo):
@@ -352,6 +377,7 @@ def best11(lineup, modulo):
                             if r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                                 highest = player
                                 highest.malus = True
+                                max_malus += 1
         best_names.append(highest.name)
         best_players.append(highest)
         best_roles.append(role)
@@ -360,12 +386,12 @@ def best11(lineup, modulo):
 
 
 # finds best modulo for given lineup
-def best_lineup(lineup):
+def best_lineup(lineup, moduli, mantra):
     highest_score = 0
     best_11 = []
     best_modulo = ""
-    for m in MODULI:
-        score, names = best11(lineup, MODULI[m])
+    for m in moduli:
+        score, names = best11(lineup, moduli[m], mantra)
         if score >= highest_score:
             highest_score = score
             best_11 = names
@@ -374,22 +400,25 @@ def best_lineup(lineup):
 
 
 # print best lineups for each week
-def print_best_lineup(lineup):
-    lineup = best_lineup(lineup)
+def print_best_lineup(lineup, moduli, mantra):
+    lineup = best_lineup(lineup, moduli, mantra)
     print(lineup.team_name)
     print("Fantapunti: {}\t Modulo: {}".format(lineup.points, lineup.modulo))
     best_11 = [p.name + ' *' if p.malus else p.name for p in lineup.players]
     print(best_11, "\n\n")
 
 
-def print_best_lineups(lineups):
+def print_best_lineups(lineups, mantra=True):
     matchday = 1
     loop_count = 0
     for l in lineups:
         if loop_count % 10 == 0:
             print("\nICDQCMAS GIORNATA {}\n".format(matchday))
             matchday += 1
-        print_best_lineup(l)
+        if mantra:
+            print_best_lineup(l, MODULIMANTRA, mantra)
+        else:
+            print_best_lineup(l, MODULICLASSIC, mantra)
         loop_count += 1
 
 
@@ -401,9 +430,12 @@ def pairwise(iterable):
 
 
 # calculates and prints table based on best lineups, instead of actual lineups
-def ICDQCMAS_table(lineups):
+def ICDQCMAS_table(lineups, mantra=True):
     # calcuates best lineup for each match
-    lineups = [best_lineup(l) for l in lineups]
+    if mantra:
+        lineups = [best_lineup(l, MODULIMANTRA, mantra) for l in lineups]
+    else:
+        lineups = [best_lineup(l, MODULICLASSIC, mantra) for l in lineups]
     # no bench in optimal lineups
     for lineup in lineups:
         for player in lineup.players:
@@ -488,6 +520,11 @@ def main():
     # prepare files to read
     league = input("Enter league (folder) name: ")
     num_matchdays = int(input("Enter number of files: "))
+    mantra = input("M for Mantra, C for classic: ")
+    if mantra.lower() == "c":
+        mantra = False
+    else:
+        mantra = True
     html_files = ["{}/{}.html".format(league, p)
                   for p in range(1, num_matchdays + 1)]
     # parse lineups
@@ -507,7 +544,7 @@ def main():
     matches_pandas(matches, league)
     lineups_pandas(lineups, league)
     # calculates and prints table based on best lineups, instead of actual lineups
-    best_lineups = ICDQCMAS_table(lineups)
+    best_lineups = ICDQCMAS_table(lineups, mantra)
     lineups_pandas(best_lineups, "ICDQCMAS_table_" + league)
     # print best lineups
     # print_best_lineups(lineups)

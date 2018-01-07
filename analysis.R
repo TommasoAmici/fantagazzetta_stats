@@ -41,6 +41,15 @@ with(seriea, CrossTable(Modulo, Squadra, missing.include=TRUE))
 modulo352 <- seriea[seriea$Modulo == 352,]
 modulo4231 <- seriea[seriea$Modulo == 4231,]
 
+# calculates ICDQCMAS index from non optimized and optimized lineups
+ICDQCMAS <- function(df, df2) {
+  df$ICDQCMAS_index <- df$Fantapunti / df2$Fantapunti
+  return(df)
+}
+
+ekstraklasa <- ICDQCMAS(ekstraklasa, ICDQCMAS_ekstraklasa)
+seriea <- ICDQCMAS(seriea, ICDQCMAS_seriea)
+
 # sum all values for each team
 library(plyr)
 vertical.sum <- function(df){
@@ -63,13 +72,14 @@ ekstraklasa.vertical <- vertical.sum(ekstraklasa)
 seriea.vertical <- vertical.sum(seriea)
 classic.vertical <- vertical.sum(classic)
 
-ICDQCMAS <- function(df){
+table.fg <- function(df){
   df$Classifica <- df$W*3 + df$T
   df$Ammonizione <- NULL
   df$Assist <- NULL
   df$Autorete <- NULL
   df$Espulsione <- NULL
-  df$Fantapunti <- NULL
+  df$Fantapunti <- df$Fantapunti / (df$W + df$T + df$L)
+  df$ICDQCMAS_index <- df$ICDQCMAS_index / (df$W + df$T + df$L)
   df$Goal <- NULL
   df$Goal.subito <- NULL
   df$Malus <- NULL
@@ -80,10 +90,8 @@ ICDQCMAS <- function(df){
   return(df)
 }
 
-ICDQCMAS_seriea_vert <- vertical.sum(ICDQCMAS_seriea)
-ICDQCMAS_seriea_table <- ICDQCMAS(ICDQCMAS_seriea_vert)
-ICDQCMAS_ekstraklasa_vert <- vertical.sum(ICDQCMAS_ekstraklasa)
-ICDQCMAS_ekstraklasa_table <- ICDQCMAS(ICDQCMAS_ekstraklasa_vert)
+ekstraklasa.table <- table.fg(ekstraklasa.vertical)
+seriea.table <- table.fg(seriea.vertical)
 
 # offense scatterplot
 scatter.goal <- function(df) {
