@@ -402,7 +402,12 @@ def pairwise(iterable):
 
 # calculates and prints table based on best lineups, instead of actual lineups
 def ICDQCMAS_table(lineups):
+    # calcuates best lineup for each match
     lineups = [best_lineup(l) for l in lineups]
+    # no bench in optimal lineups
+    for lineup in lineups:
+        for player in lineup.players:
+            player.bench = False
     for l, m in pairwise(lineups):
         if l.calculate_goals() > m.calculate_goals():
             l.result = "Vittoria"

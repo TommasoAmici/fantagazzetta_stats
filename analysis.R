@@ -1,4 +1,4 @@
-# import data
+# import data from disk
 classic <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_classic.csv")
 seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_seriea.csv")
 ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_ekstraklasa.csv")
@@ -80,8 +80,10 @@ ICDQCMAS <- function(df){
   return(df)
 }
 
-ICDQCMAS_seriea <- vertical.sum(ICDQCMAS_seriea)
-ICDQCMAS_seriea <- ICDQCMAS(ICDQCMAS_seriea)
+ICDQCMAS_seriea_vert <- vertical.sum(ICDQCMAS_seriea)
+ICDQCMAS_seriea_table <- ICDQCMAS(ICDQCMAS_seriea_vert)
+ICDQCMAS_ekstraklasa_vert <- vertical.sum(ICDQCMAS_ekstraklasa)
+ICDQCMAS_ekstraklasa_table <- ICDQCMAS(ICDQCMAS_ekstraklasa_vert)
 
 # offense scatterplot
 scatter.goal <- function(df) {
