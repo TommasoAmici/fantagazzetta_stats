@@ -1,0 +1,81 @@
+,Ammonizione casa,Ammonizione fuori casa,Assist casa,Assist da fermo casa,Assist da fermo fuori casa,Assist fuori casa,Autorete casa,Autorete fuori casa,Espulsione casa,Espulsione fuori casa,Fantapunti casa,Fantapunti fuori casa,Goal casa,Goal fuori casa,Goal subito casa,Goal subito fuori casa,Malus casa,Malus fuori casa,Modulo applicato casa,Modulo applicato fuori casa,Modulo casa,Modulo fuori casa,Punti casa,Punti fuori casa,Rigore parato casa,Rigore parato fuori casa,Rigore sbagliato casa,Rigore sbagliato fuori casa,Rigore segnato casa,Rigore segnato fuori casa,Risultato,Risultato casa,Risultato fuori casa,Squadra casa,Squadra fuori casa
+0,1,1,2,0,0,1,0,0,0,0,83.0,69.0,4,2,1,3,0,0,352,343,352,343,70.5,65.5,0,0,0,0,0,0,5-1,Vittoria,Sconfitta,FC Elektrosila Skingrad,Pro Sud Gradinata
+1,0,2,2,1,0,1,0,0,0,0,81.0,70.0,3,1,0,1,0,0,343,343,343,343,69.0,68.0,0,0,0,0,0,0,4-2,Vittoria,Sconfitta,Varese Primavera,AC Vostra
+2,0,4,1,0,0,0,0,0,0,0,78.5,84.5,2,3,1,0,0,0,433,343,433,343,69.5,71.5,0,0,0,0,1,2,4-5,Sconfitta,Vittoria,Civitanova Squidfishers,Bluefin FC
+3,1,1,1,0,0,0,0,0,0,0,81.0,58.5,4,0,1,0,0,0,343,343,343,343,69.5,59.0,0,0,0,0,0,0,4-0,Vittoria,Sconfitta,SS Condom,FK Qarabaq
+4,0,0,3,0,0,1,0,0,0,0,75.5,77.5,1,3,0,2,0,0,343,343,343,343,69.5,69.5,0,0,0,0,0,0,3-3,Pareggio,Pareggio,Overflow FC,Sbronzi di Riace
+5,2,0,0,0,0,0,0,0,0,0,59.5,76.0,0,2,1,0,0,0,343,433,343,433,58.5,67.0,0,0,0,0,1,1,0-3,Sconfitta,Vittoria,AC Vostra,Civitanova Squidfishers
+6,3,1,0,0,0,0,2,0,0,0,64.0,62.5,1,0,0,1,0,0,343,343,343,343,65.5,64.0,0,0,0,0,1,0,0-0,Pareggio,Pareggio,FK Qarabaq,FC Elektrosila Skingrad
+7,2,1,1,0,0,1,0,0,0,0,68.5,73.5,0,2,2,1,0,0,343,343,343,343,67.5,65.0,0,1,0,0,1,0,1-2,Sconfitta,Vittoria,Sbronzi di Riace,Varese Primavera
+8,1,2,2,0,0,1,0,0,0,0,79.0,81.5,2,4,1,0,0,0,343,343,343,343,69.5,69.5,0,0,0,0,1,0,4-4,Pareggio,Pareggio,Bluefin FC,SS Condom
+9,1,2,0,0,0,2,0,0,0,0,77.5,66.0,3,0,0,1,0,0,352,343,352,343,69.0,66.0,0,0,0,0,0,0,3-1,Vittoria,Sconfitta,Pro Sud Gradinata,Overflow FC
+10,0,0,3,0,1,2,0,0,0,0,86.0,77.0,4,2,0,0,0,0,433,343,433,343,71.0,68.0,0,0,0,1,0,1,6-3,Vittoria,Sconfitta,FC Elektrosila Skingrad,Bluefin FC
+11,1,2,1,1,0,0,0,0,0,1,69.0,66.0,2,2,2,2,0,0,343,343,343,343,66.5,64.0,0,0,1,0,0,0,1-1,Pareggio,Pareggio,Civitanova Squidfishers,Varese Primavera
+12,1,1,3,0,0,0,0,0,0,0,78.5,67.0,3,0,0,1,0,0,343,343,343,343,67.0,65.5,0,1,0,0,0,0,4-1,Vittoria,Sconfitta,SS Condom,AC Vostra
+13,1,1,0,0,0,0,0,0,0,1,64.5,61.5,0,1,1,4,0,0,343,343,343,343,66.0,64.0,0,0,0,0,0,0,0-0,Pareggio,Pareggio,Pro Sud Gradinata,Sbronzi di Riace
+14,2,1,1,0,0,1,0,0,0,0,66.5,64.0,1,0,2,1,0,0,343,343,343,343,65.5,64.5,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,Overflow FC,FK Qarabaq
+15,2,0,2,0,0,0,0,0,0,0,70.0,69.0,1,1,2,1,0,0,343,343,343,343,65.0,67.0,0,0,0,1,1,1,2-1,Vittoria,Sconfitta,AC Vostra,FC Elektrosila Skingrad
+16,1,1,0,0,0,0,0,0,0,0,67.5,81.0,1,5,1,2,0,0,343,343,343,343,66.0,68.5,0,0,0,0,0,0,1-4,Sconfitta,Vittoria,Varese Primavera,SS Condom
+17,2,1,1,0,0,0,0,0,1,0,67.5,64.5,1,2,0,6,0,0,343,343,343,343,65.5,65.0,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,FK Qarabaq,Pro Sud Gradinata
+18,1,2,1,1,0,1,0,0,0,0,64.5,64.0,0,0,2,2,0,0,343,343,343,343,65.0,66.0,0,0,0,0,0,0,0-0,Pareggio,Pareggio,Sbronzi di Riace,Civitanova Squidfishers
+19,2,0,2,0,0,0,0,0,0,0,82.0,73.5,1,2,1,0,0,0,433,343,433,343,70.0,67.5,0,0,0,0,3,0,5-2,Vittoria,Sconfitta,Bluefin FC,Overflow FC
+20,2,1,0,0,0,0,0,0,0,0,64.0,58.0,1,0,1,2,0,0,352,343,352,343,66.0,60.5,0,0,1,0,0,0,0-0,Pareggio,Pareggio,FC Elektrosila Skingrad,Varese Primavera
+21,2,2,1,1,0,0,0,0,0,0,64.0,68.0,0,2,2,3,0,0,343,442,343,442,65.0,66.0,0,0,0,0,0,0,0-1,Sconfitta,Vittoria,SS Condom,Civitanova Squidfishers
+22,5,2,0,0,0,3,0,0,0,0,66.0,81.0,2,4,1,2,0,0,343,343,343,343,60.5,69.0,0,0,0,0,1,0,1-4,Sconfitta,Vittoria,FK Qarabaq,Sbronzi di Riace
+23,0,2,0,0,0,1,0,0,0,0,71.5,71.0,1,1,0,3,0,0,343,433,343,433,65.5,68.0,0,0,0,0,1,1,2-2,Pareggio,Pareggio,Pro Sud Gradinata,Bluefin FC
+24,0,2,0,0,0,2,0,0,0,0,68.5,65.5,1,0,0,1,0,0,343,343,343,343,65.5,65.5,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,Overflow FC,AC Vostra
+25,1,2,0,2,0,1,1,0,0,1,63.5,62.5,0,0,0,0,0,0,343,343,343,343,65.0,63.5,0,0,1,0,1,0,0-0,Pareggio,Pareggio,AC Vostra,Pro Sud Gradinata
+26,1,3,0,0,0,2,0,0,0,0,75.0,87.0,2,5,0,0,0,0,343,343,343,343,66.5,71.5,0,0,0,0,1,0,3-6,Sconfitta,Vittoria,Varese Primavera,Overflow FC
+27,3,0,0,1,1,3,0,0,0,0,66.5,69.5,0,0,0,2,0,0,433,451,433,451,67.0,67.5,0,0,0,0,0,0,1-1,Pareggio,Pareggio,Civitanova Squidfishers,FC Elektrosila Skingrad
+28,0,1,1,0,1,0,0,0,1,0,71.0,65.5,1,0,1,2,0,0,343,343,343,343,66.0,67.0,0,0,0,0,1,0,2-0,Vittoria,Sconfitta,Sbronzi di Riace,SS Condom
+29,1,2,0,0,0,1,0,0,0,0,78.5,54.5,2,0,0,0,0,0,343,343,343,343,70.0,54.5,0,0,0,0,1,0,4-0,Vittoria,Sconfitta,Bluefin FC,FK Qarabaq
+30,2,0,1,0,0,0,0,0,0,0,71.0,64.0,3,0,4,1,0,0,343,343,343,343,66.0,65.0,0,0,0,0,0,0,2-0,Vittoria,Sconfitta,FC Elektrosila Skingrad,SS Condom
+31,2,2,0,0,0,3,0,0,0,0,80.0,73.5,5,2,0,0,0,0,343,343,343,343,66.0,65.5,0,0,0,0,0,0,4-2,Vittoria,Sconfitta,FK Qarabaq,AC Vostra
+32,0,2,0,0,0,3,0,0,0,0,73.5,74.5,2,2,1,3,0,0,343,343,343,343,68.5,69.5,0,0,1,0,1,0,2-3,Sconfitta,Vittoria,Bluefin FC,Sbronzi di Riace
+33,1,1,2,0,0,1,0,0,0,1,81.0,64.0,3,1,1,3,0,0,343,343,343,343,68.5,64.5,0,0,0,0,1,0,4-0,Vittoria,Sconfitta,Pro Sud Gradinata,Varese Primavera
+34,2,1,0,0,0,4,0,0,0,0,68.5,72.0,2,0,2,1,0,0,343,442,343,442,65.5,69.5,0,0,0,0,0,0,1-2,Sconfitta,Vittoria,Overflow FC,Civitanova Squidfishers
+35,3,1,2,1,0,4,0,0,0,0,72.5,80.0,2,2,2,1,0,0,343,343,343,343,67.0,68.5,0,0,0,0,0,1,2-4,Sconfitta,Vittoria,AC Vostra,Bluefin FC
+36,1,1,2,0,0,0,0,0,0,0,72.0,63.5,2,2,4,1,0,0,343,343,343,343,68.5,59.0,0,0,0,0,0,0,2-0,Vittoria,Sconfitta,FC Elektrosila Skingrad,Sbronzi di Riace
+37,1,1,2,0,0,1,0,0,0,0,69.5,77.0,1,3,1,0,0,0,343,343,343,343,66.0,67.5,0,0,0,0,0,0,1-3,Sconfitta,Vittoria,Varese Primavera,FK Qarabaq
+38,2,1,0,0,0,0,0,0,0,0,72.0,62.5,3,1,2,3,0,0,433,343,433,343,66.0,63.0,0,0,0,0,0,0,2-0,Vittoria,Sconfitta,Civitanova Squidfishers,Pro Sud Gradinata
+39,2,2,0,0,0,0,0,0,0,0,72.0,64.5,2,0,0,1,0,0,343,442,343,442,67.0,66.5,0,0,1,0,1,0,2-0,Vittoria,Sconfitta,SS Condom,Overflow FC
+40,3,2,1,0,0,1,0,0,0,0,75.0,65.5,3,0,2,0,0,0,343,343,343,343,68.5,65.5,0,0,0,0,0,0,3-0,Vittoria,Sconfitta,FK Qarabaq,Civitanova Squidfishers
+41,2,1,2,0,0,0,0,0,0,0,70.5,69.0,1,1,1,1,0,0,343,343,343,343,67.5,67.5,0,0,0,0,0,0,2-1,Vittoria,Sconfitta,Sbronzi di Riace,AC Vostra
+42,1,0,0,0,0,1,0,0,0,0,67.0,61.5,1,0,0,2,0,0,343,343,343,343,64.5,62.5,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,Bluefin FC,Varese Primavera
+43,2,1,0,0,0,2,0,0,0,0,74.0,78.5,3,3,2,1,0,0,343,343,343,343,68.0,69.0,0,0,0,0,0,0,3-4,Sconfitta,Vittoria,Pro Sud Gradinata,SS Condom
+44,1,0,1,0,0,1,0,0,0,1,66.0,65.0,0,0,0,0,0,0,442,352,442,352,65.5,65.0,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,Overflow FC,FC Elektrosila Skingrad
+45,4,3,2,1,0,0,0,0,0,0,60.0,66.0,0,1,1,0,0,0,343,343,343,343,63.0,64.5,0,0,1,0,0,0,0-1,Sconfitta,Vittoria,AC Vostra,Varese Primavera
+46,2,0,0,0,0,1,0,0,0,0,77.5,67.0,3,1,1,3,0,0,343,343,343,343,67.5,66.0,0,0,0,0,1,0,3-1,Vittoria,Sconfitta,FK Qarabaq,SS Condom
+47,0,2,2,0,0,0,0,0,0,0,71.5,68.0,1,2,1,1,0,0,343,442,343,442,67.5,64.0,0,0,0,0,0,0,2-1,Vittoria,Sconfitta,Sbronzi di Riace,Overflow FC
+48,1,1,2,1,0,0,0,0,0,0,76.0,62.5,0,1,0,2,0,0,433,343,433,343,67.5,65.0,0,0,0,1,2,0,3-0,Vittoria,Sconfitta,Bluefin FC,Civitanova Squidfishers
+49,1,0,4,0,0,0,0,0,0,0,74.5,64.0,1,1,1,2,0,0,343,433,343,433,69.0,63.0,0,0,0,0,0,0,3-0,Vittoria,Sconfitta,Pro Sud Gradinata,FC Elektrosila Skingrad
+50,1,2,1,0,0,0,0,0,0,0,69.0,63.0,1,2,1,1,0,0,352,343,352,343,66.5,59.0,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,FC Elektrosila Skingrad,FK Qarabaq
+51,0,1,1,0,0,1,0,0,0,0,73.0,61.5,2,1,1,0,0,0,343,343,343,343,67.0,61.0,0,0,0,1,0,0,2-0,Vittoria,Sconfitta,Varese Primavera,Sbronzi di Riace
+52,1,0,0,0,0,1,0,0,0,0,69.0,63.5,1,0,0,2,0,0,433,343,433,343,66.5,64.5,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,Civitanova Squidfishers,AC Vostra
+53,2,1,0,0,0,1,0,0,0,0,61.5,70.5,0,1,0,1,0,0,343,433,343,433,62.5,68.0,0,0,0,0,0,0,0-2,Sconfitta,Vittoria,SS Condom,Bluefin FC
+54,3,1,1,0,1,0,0,0,0,0,57.5,70.5,0,2,0,2,0,0,343,343,343,343,58.0,66.0,0,0,0,0,0,0,0-2,Sconfitta,Vittoria,Overflow FC,Pro Sud Gradinata
+55,3,0,1,0,1,2,0,0,0,1,67.0,70.5,1,2,0,0,0,0,343,343,343,343,64.5,62.5,0,0,0,0,0,0,1-2,Sconfitta,Vittoria,AC Vostra,SS Condom
+56,2,0,1,0,0,2,0,0,0,0,66.0,68.5,1,0,0,2,0,0,343,433,343,433,63.0,68.5,0,0,0,0,0,0,1-1,Pareggio,Pareggio,Varese Primavera,Civitanova Squidfishers
+57,1,1,1,0,0,0,0,0,0,0,76.0,67.5,3,1,1,1,0,0,343,442,343,442,64.5,66.0,1,0,0,0,0,0,3-1,Vittoria,Sconfitta,FK Qarabaq,Overflow FC
+58,1,1,3,0,0,0,0,0,0,0,76.5,70.0,4,2,1,3,0,0,343,343,343,343,63.0,67.5,0,0,0,0,0,0,3-2,Vittoria,Sconfitta,Sbronzi di Riace,Pro Sud Gradinata
+59,4,1,1,0,0,1,0,0,0,0,72.5,70.0,2,2,0,1,0,0,343,433,343,433,67.5,64.5,0,0,0,0,0,0,2-2,Pareggio,Pareggio,Bluefin FC,FC Elektrosila Skingrad
+60,2,1,2,0,0,0,0,0,0,0,69.5,69.0,0,3,0,2,0,0,343,343,343,343,68.5,62.5,0,0,0,0,0,0,1-1,Pareggio,Pareggio,FC Elektrosila Skingrad,AC Vostra
+61,2,2,1,0,0,1,1,0,0,0,61.5,64.0,0,1,1,1,0,0,433,343,433,343,65.5,62.0,0,0,0,0,0,0,0-0,Pareggio,Pareggio,Civitanova Squidfishers,Sbronzi di Riace
+62,4,1,0,0,0,2,0,0,0,0,74.0,69.5,3,1,0,2,0,0,343,343,343,343,67.0,67.0,0,0,0,0,0,0,3-1,Vittoria,Sconfitta,SS Condom,Varese Primavera
+63,1,4,0,0,0,1,0,0,0,0,68.0,70.5,1,2,1,0,0,0,343,343,343,343,66.5,65.5,0,0,0,0,0,0,1-2,Sconfitta,Vittoria,Pro Sud Gradinata,FK Qarabaq
+64,0,1,0,0,0,1,0,0,0,1,66.0,60.5,1,0,0,3,0,0,442,343,442,343,66.0,64.0,0,0,1,0,0,0,1-0,Vittoria,Sconfitta,Overflow FC,Bluefin FC
+65,3,0,0,0,0,0,0,0,0,0,66.5,79.5,1,3,0,1,0,0,343,352,343,352,65.0,68.5,0,0,0,0,0,1,1-4,Sconfitta,Vittoria,AC Vostra,Overflow FC
+66,2,2,1,0,1,2,0,0,0,0,62.5,68.0,0,0,0,1,0,0,343,343,343,343,65.5,67.0,0,0,1,0,0,0,0-1,Sconfitta,Vittoria,Varese Primavera,FC Elektrosila Skingrad
+67,1,2,1,0,0,0,0,0,0,0,67.0,65.0,1,0,3,0,0,0,343,352,343,352,66.5,63.0,0,0,0,0,0,1,1-0,Vittoria,Sconfitta,Civitanova Squidfishers,SS Condom
+68,1,1,1,0,0,0,0,0,1,0,58.0,76.0,0,3,3,0,0,0,343,343,343,343,61.5,67.5,0,0,0,0,0,0,0-3,Sconfitta,Vittoria,Sbronzi di Riace,FK Qarabaq
+69,2,2,4,0,0,0,0,0,0,0,69.5,70.0,2,2,3,0,0,0,442,343,442,343,66.5,65.0,0,0,1,0,0,0,1-2,Sconfitta,Vittoria,Bluefin FC,Pro Sud Gradinata
+70,1,1,1,0,0,0,0,0,0,1,68.5,60.5,2,0,3,2,0,0,352,433,352,433,65.0,64.0,0,0,0,0,0,0,1-0,Vittoria,Sconfitta,FC Elektrosila Skingrad,Civitanova Squidfishers
+71,1,2,1,0,0,0,0,0,0,0,81.5,58.5,4,0,0,2,0,0,352,343,352,343,69.0,61.5,0,0,0,0,0,0,4-0,Vittoria,Sconfitta,SS Condom,Sbronzi di Riace
+72,1,1,0,0,0,3,0,0,0,0,67.0,77.0,2,2,1,1,0,0,343,442,343,442,65.5,69.5,0,0,1,0,0,0,1-3,Sconfitta,Vittoria,FK Qarabaq,Bluefin FC
+73,2,2,0,1,1,0,0,0,1,0,75.5,72.0,1,1,0,0,0,0,343,343,343,343,67.5,66.0,1,0,0,0,1,1,3-2,Vittoria,Sconfitta,Pro Sud Gradinata,AC Vostra
+74,1,2,1,0,0,2,0,0,0,0,69.5,75.0,3,2,2,0,0,0,352,343,352,343,62.0,68.0,0,0,0,0,0,0,1-3,Sconfitta,Vittoria,Overflow FC,Varese Primavera
+75,1,2,1,0,0,0,0,0,0,0,70.5,63.0,1,0,1,1,0,0,343,343,343,343,65.0,65.0,0,0,0,0,1,0,2-0,Vittoria,Sconfitta,AC Vostra,FK Qarabaq
+76,2,0,1,0,0,0,0,0,0,0,65.0,69.5,0,1,0,1,0,0,343,433,343,433,65.0,67.5,0,0,0,0,0,0,0-1,Sconfitta,Vittoria,Varese Primavera,Pro Sud Gradinata
+77,1,1,0,0,0,0,0,0,0,0,70.5,69.5,1,1,1,0,0,0,442,352,442,352,69.0,67.0,0,0,0,0,0,0,2-1,Vittoria,Sconfitta,Civitanova Squidfishers,Overflow FC
+78,3,2,2,0,0,0,0,0,0,0,70.0,76.0,1,3,1,1,0,0,352,451,352,451,67.5,69.0,0,0,0,0,0,0,2-3,Sconfitta,Vittoria,SS Condom,FC Elektrosila Skingrad
+79,1,1,0,0,0,2,0,0,0,0,67.0,68.5,1,0,0,0,0,0,343,433,343,433,64.5,67.0,0,0,0,0,0,0,1-1,Pareggio,Pareggio,Sbronzi di Riace,Bluefin FC
