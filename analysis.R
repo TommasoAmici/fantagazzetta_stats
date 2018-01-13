@@ -1,10 +1,6 @@
 # import data from disk
-classic <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_classic.csv")
-seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_seriea.csv")
-ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ekstraklasa.csv")
-ICDQCMAS_seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_seriea.csv")
-ICDQCMAS_classic <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_classic.csv")
-ICDQCMAS_ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_ekstraklasa.csv")
+data <- read.csv("")
+ICDQCMAS_data <- read.csv("")
 
 library(ggplot2)
 library(scales)
@@ -25,21 +21,16 @@ modulibox <- function(df, title) {
     ggtitle(title)
 }
 
-moduli(classic, "Classic")
-modulibox(classic, "Classic")
+moduli(data, "Classic")
+modulibox(data, "Classic")
 
-moduli(ekstraklasa, "Ekstraklasa")
-modulibox(ekstraklasa, "Ekstraklasa")
-
-moduli(seriea, "Serie A")
-modulibox(seriea, "Serie A")
 
 library(gmodels)
-with(seriea, CrossTable(Modulo, Squadra, missing.include=TRUE))
+with(data, CrossTable(Modulo, Squadra, missing.include=TRUE))
 
 # extract by modulo
-modulo352 <- seriea[seriea$Modulo == 352,]
-modulo4231 <- seriea[seriea$Modulo == 4231,]
+modulo352 <- data[data$Modulo == 352,]
+modulo4231 <- data[data$Modulo == 4231,]
 
 # calculates ICDQCMAS index from non optimized and optimized lineups
 ICDQCMAS <- function(df, df2) {
@@ -47,9 +38,7 @@ ICDQCMAS <- function(df, df2) {
   return(df)
 }
 
-ekstraklasa <- ICDQCMAS(ekstraklasa, ICDQCMAS_ekstraklasa)
-seriea <- ICDQCMAS(seriea, ICDQCMAS_seriea)
-classic <- ICDQCMAS(classic, ICDQCMAS_classic)
+data <- ICDQCMAS(data, ICDQCMAS_data)
 
 # sum all values for each team
 library(plyr)
@@ -69,11 +58,8 @@ vertical.sum <- function(df){
   df$X <- NULL
   return(df)
 }
-ekstraklasa.vertical <- vertical.sum(ekstraklasa)
-ICDekstraklasa.vertical <- vertical.sum(ICDQCMAS_ekstraklasa)
-
-seriea.vertical <- vertical.sum(seriea)
-classic.vertical <- vertical.sum(classic)
+data.vertical <- vertical.sum(data)
+ICDQdata.vertical <- vertical.sum(ICDQCMAS_data)
 
 table.fg <- function(df){
   df$Classifica <- df$W*3 + df$T
@@ -93,9 +79,25 @@ table.fg <- function(df){
   return(df)
 }
 
-ekstraklasa.table <- table.fg(ekstraklasa.vertical)
-seriea.table <- table.fg(seriea.vertical)
-classic.table <- table.fg(classic.vertical)
+table.icdqcmas.fg <- function(df){
+  df$Classifica <- df$W*3 + df$T
+  df$Ammonizione <- NULL
+  df$Assist <- NULL
+  df$Autorete <- NULL
+  df$Espulsione <- NULL
+  df$Fantapunti <- df$Fantapunti / (df$W + df$T + df$L)
+  df$Goal <- NULL
+  df$Goal.subito <- NULL
+  df$Malus <- NULL
+  df$Punti <- NULL
+  df$Rigore.parato <- NULL
+  df$Rigore.sbagliato <- NULL
+  df$Rigore.segnato <- NULL
+  return(df)
+}
+
+data.table <- table.fg(data.vertical)
+data.icdqcmas.table <- table.icdqcmas.fg(ICDQdata.vertical)
 
 # offense scatterplot
 scatter.goal <- function(df) {
@@ -105,6 +107,4 @@ scatter.goal <- function(df) {
     geom_point(color = 'red') +
     geom_text_repel()
 }
-scatter.goal(classic.vertical)
-scatter.goal(ekstraklasa.vertical)
-scatter.goal(seriea.vertical)
+scatter.goal(data.vertical)
