@@ -371,13 +371,13 @@ def best11(lineup, modulo, mantra):
                     if r in role and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                         highest = player
         # if no player fills role, apply malus
-        if highest.fantavoto is None or highest.fantavoto == 0 and max_malus < 3 and mantra:
+        if (highest.fantavoto is None or highest.fantavoto == 0) and max_malus < 3 and mantra:
             for role in roles:
                 # finds roles that can be filled with a malus
                 for r_malus in find_role_malus(role, modulo):
                     for player in players:
                         for r in player.roles:
-                            if r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names:
+                            if (r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names and max_malus < 3):
                                 highest = player
                                 highest.malus = True
                                 max_malus += 1
@@ -561,7 +561,7 @@ def main():
     best_lineups = ICDQCMAS_table(lineups, mantra)
     lineups_pandas(best_lineups, "ICDQCMAS_table_" + league, directory)
     # print best lineups
-    # print_best_lineups(lineups)
+    print_best_lineups(lineups)
 
 
 main()

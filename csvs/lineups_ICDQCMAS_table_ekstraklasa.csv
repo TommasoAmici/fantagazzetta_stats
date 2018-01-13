@@ -8,7 +8,7 @@
 6,0,2,0,0,0,78.0,2,0,0,442,442,70.0,0,0,0,Vittoria,Civitanova Squidfishers
 7,1,1,0,0,0,68.5,0,0,0,4312,4312,68.0,0,0,0,Sconfitta,Club Atletico Luigi Cadorna Milano 1896
 8,1,5,0,0,0,90.0,3,0,0,4312,4312,73.5,0,0,1,Vittoria,S S Condom
-9,0,0,0,0,0,75.5,1,0,0,4312,4312,69.5,0,0,1,Sconfitta,Overflow FC
+9,0,0,0,0,0,75.5,1,0,0,352,352,69.5,0,0,1,Sconfitta,Overflow FC
 10,1,2,0,0,0,72.0,1,0,0,343,343,67.5,0,0,0,Sconfitta,Overflow FC
 11,0,1,0,0,0,85.5,3,1,0,4312,4312,70.5,0,0,2,Vittoria,Bluefin FC
 12,1,2,0,0,0,79.5,3,2,0,343,343,71.0,0,0,0,Sconfitta,Tutankhamon Rotoloni Cigni
@@ -18,11 +18,11 @@
 16,0,0,0,0,0,83.5,5,2,0,4312,4312,70.5,0,0,0,Vittoria,Club Atletico Luigi Cadorna Milano 1896
 17,0,0,0,0,0,79.0,4,1,0,3412,3412,68.0,0,0,0,Sconfitta,Club Atletico De San Martin De Tucuman
 18,1,4,0,0,0,73.0,1,2,0,4411,4411,68.5,0,0,0,Sconfitta,The Okan
-19,3,2,0,0,0,75.5,2,1,0,4222,4222,70.0,0,0,0,Vittoria,Hyrule's Chickens
+19,3,2,0,0,0,75.5,2,1,0,4321,4321,70.0,0,0,0,Vittoria,Hyrule's Chickens
 20,2,2,0,0,0,72.0,1,1,0,4222,4222,69.0,0,0,0,Sconfitta,Club Atletico De San Martin De Tucuman
 21,1,2,0,0,0,80.0,2,0,0,4312,4312,72.5,0,0,0,Vittoria,Tutankhamon Rotoloni Cigni
 22,1,0,0,0,0,69.0,1,0,0,4222,4222,66.5,0,0,0,Sconfitta,Hyrule's Chickens
-23,1,2,0,0,0,83.0,4,1,0,433,433,70.5,0,0,0,Vittoria,Overflow FC
+23,1,2,0,0,0,83.0,4,1,0,442,442,70.5,0,0,0,Vittoria,Overflow FC
 24,1,0,0,0,0,75.5,2,2,0,3412,3412,69.0,0,0,1,Pareggio,Club Atletico Luigi Cadorna Milano 1896
 25,0,0,0,0,0,76.5,3,1,0,3412,3412,68.5,0,0,0,Pareggio,Pro Sud Gradinata
 26,2,0,0,0,0,71.5,2,0,0,4312,4312,66.5,0,0,0,Pareggio,Bluefin FC
@@ -43,7 +43,7 @@
 41,0,0,0,0,0,76.0,2,1,0,4411,4411,68.0,0,0,1,Vittoria,Pro Sud Gradinata
 42,0,4,0,0,0,81.0,3,2,0,4222,4222,70.0,0,0,0,Pareggio,Club Atletico De San Martin De Tucuman
 43,1,0,0,0,0,80.0,4,0,0,4222,4222,68.5,0,0,0,Pareggio,Overflow FC
-44,1,0,2,0,0,89.0,5,2,0,4312,4312,71.5,0,0,1,Vittoria,Hyrule's Chickens
+44,1,0,2,0,0,88.5,5,2,0,433,433,71.0,0,0,1,Vittoria,Hyrule's Chickens
 45,1,2,0,0,0,74.5,0,2,0,352,352,69.0,0,0,2,Sconfitta,Bluefin FC
 46,2,1,0,0,0,77.0,2,2,1,352,352,70.5,0,0,1,Vittoria,Club Atletico Luigi Cadorna Milano 1896
 47,0,0,0,0,0,66.0,0,1,1,352,352,67.5,0,0,0,Sconfitta,The Okan
@@ -52,7 +52,7 @@
 50,3,0,0,0,0,85.5,4,0,0,4411,4411,72.0,0,0,1,Vittoria,Overflow FC
 51,2,2,0,0,0,78.0,3,2,0,4411,4411,70.0,0,0,0,Sconfitta,Club Atletico Luigi Cadorna Milano 1896
 52,1,2,0,1,0,75.0,2,2,0,3421,3421,72.5,0,0,0,Vittoria,Pro Sud Gradinata
-53,0,2,0,0,0,67.0,0,3,0,4411,4411,68.0,0,0,0,Sconfitta,Hyrule's Chickens
+53,0,2,0,0,0,67.0,0,3,0,4321,4321,68.0,0,0,0,Sconfitta,Hyrule's Chickens
 54,1,1,0,0,0,73.5,1,2,0,3421,3421,72.0,0,0,0,Pareggio,Bluefin FC
 55,1,1,0,0,0,70.5,1,1,0,433,433,68.0,0,0,0,Pareggio,Civitanova Squidfishers
 56,4,0,0,0,0,73.0,3,2,0,343,343,68.0,0,0,0,Vittoria,The Okan
@@ -64,9 +64,9 @@
 62,1,0,0,0,0,80.5,1,0,0,343,343,72.0,0,0,2,Vittoria,Club Atletico De San Martin De Tucuman
 63,0,0,0,0,0,70.5,0,2,0,4411,4411,69.5,0,0,1,Sconfitta,Bluefin FC
 64,1,0,1,0,0,73.0,2,1,0,4321,4321,67.5,0,0,0,Sconfitta,Club Atletico Luigi Cadorna Milano 1896
-65,0,0,0,0,0,79.0,2,0,1,4222,4222,70.5,0,0,1,Vittoria,S S Condom
+65,0,0,0,0,0,79.0,2,0,1,4312,4312,70.5,0,0,1,Vittoria,S S Condom
 66,4,1,1,0,0,71.5,1,0,0,442,442,68.5,0,0,0,Pareggio,Civitanova Squidfishers
-67,0,1,1,0,0,71.5,1,0,0,4312,4312,66.5,0,0,0,Pareggio,Hyrule's Chickens
+67,0,1,1,0,0,71.0,1,0,0,4312,4312,66.0,0,0,0,Pareggio,Hyrule's Chickens
 68,1,1,0,0,0,70.0,0,1,1,352,352,68.0,1,0,0,Sconfitta,The Okan
 69,0,0,0,0,0,90.0,5,0,0,4312,4312,75.0,0,0,0,Vittoria,Pro Sud Gradinata
 70,1,1,0,0,0,75.0,3,2,0,352,352,67.5,0,0,0,Vittoria,Overflow FC
@@ -110,16 +110,16 @@
 108,0,1,0,0,0,78.5,2,2,0,3412,3412,70.5,0,0,1,Vittoria,S S Condom
 109,0,0,0,0,0,69.5,1,0,0,4411,4411,66.5,0,0,0,Sconfitta,Pro Sud Gradinata
 110,1,2,0,0,0,90.5,5,0,1,4312,4312,74.5,0,0,0,Vittoria,Overflow FC
-111,1,1,0,0,0,67.0,0,0,0,4312,4312,66.5,0,0,0,Sconfitta,Hyrule's Chickens
+111,1,1,0,0,0,67.0,0,0,0,4222,4222,66.5,0,0,0,Sconfitta,Hyrule's Chickens
 112,1,1,0,0,0,83.0,4,1,0,4312,4312,71.5,0,0,0,Vittoria,Tutankhamon Rotoloni Cigni
 113,1,0,0,0,0,67.0,0,1,0,4411,4411,68.5,0,0,0,Sconfitta,Club Atletico De San Martin De Tucuman
 114,1,0,0,0,0,72.5,2,1,0,4411,4411,68.0,0,0,0,Pareggio,Pro Sud Gradinata
 115,1,0,0,0,0,70.5,1,0,0,4312,4312,68.0,0,0,0,Pareggio,Club Atletico Luigi Cadorna Milano 1896
 116,0,0,0,0,0,71.0,1,1,0,352,352,69.0,0,0,0,Pareggio,The Okan
-117,0,2,0,0,0,72.0,0,1,0,4411,4411,71.0,0,0,0,Pareggio,Civitanova Squidfishers
-118,0,1,0,0,0,65.0,0,0,0,4222,4222,64.0,0,0,0,Sconfitta,S S Condom
+117,0,2,0,0,0,72.0,0,1,0,3421,3421,71.0,0,0,0,Pareggio,Civitanova Squidfishers
+118,0,1,0,0,0,65.0,0,0,0,4312,4312,64.0,0,0,0,Sconfitta,S S Condom
 119,2,1,1,0,0,76.0,2,0,0,352,352,69.0,0,0,0,Vittoria,Bluefin FC
-120,0,0,0,0,0,83.0,4,0,0,442,442,71.0,0,0,0,Vittoria,Club Atletico De San Martin De Tucuman
+120,0,0,0,0,0,82.5,4,0,0,442,442,70.5,0,0,0,Vittoria,Club Atletico De San Martin De Tucuman
 121,1,1,0,0,0,74.5,2,3,1,4411,4411,71.5,0,0,0,Sconfitta,The Okan
 122,0,0,0,0,0,71.5,2,2,0,4312,4312,67.5,0,0,0,Vittoria,Hyrule's Chickens
 123,2,0,1,0,0,68.0,1,1,0,4321,4321,66.0,0,0,0,Sconfitta,S S Condom
@@ -132,18 +132,18 @@
 130,0,1,0,0,0,72.0,1,0,0,442,442,68.0,0,0,0,Sconfitta,Overflow FC
 131,1,1,0,0,0,82.0,3,0,0,4411,4411,72.5,0,0,0,Vittoria,Club Atletico De San Martin De Tucuman
 132,1,1,0,0,0,71.5,1,0,0,4222,4222,68.0,0,0,0,Vittoria,Pro Sud Gradinata
-133,1,2,0,0,0,69.5,1,3,0,343,343,68.0,0,0,0,Sconfitta,Tutankhamon Rotoloni Cigni
+133,1,2,0,0,0,69.5,1,3,0,442,442,68.0,0,0,0,Sconfitta,Tutankhamon Rotoloni Cigni
 134,1,2,0,0,0,72.5,1,0,0,343,343,68.0,0,0,0,Sconfitta,Bluefin FC
 135,1,1,0,0,0,78.0,3,1,0,433,433,69.5,0,0,0,Vittoria,Hyrule's Chickens
 136,1,2,0,0,0,76.0,1,0,0,4312,4312,71.5,0,0,0,Sconfitta,The Okan
-137,1,2,0,0,0,78.5,3,1,1,352,352,69.5,0,0,0,Vittoria,Club Atletico Luigi Cadorna Milano 1896
-138,1,0,0,0,0,63.0,0,1,0,4411,4411,64.5,0,0,0,Sconfitta,S S Condom
+137,1,2,0,0,0,78.0,3,1,2,352,352,69.5,0,0,0,Vittoria,Club Atletico Luigi Cadorna Milano 1896
+138,1,0,0,0,0,63.0,0,1,0,4231,4231,64.5,0,0,0,Sconfitta,S S Condom
 139,2,0,0,0,0,77.5,2,0,0,4411,4411,69.5,0,0,1,Vittoria,Civitanova Squidfishers
-140,1,0,0,0,0,82.5,4,3,1,4222,4222,71.5,0,0,1,Vittoria,Tutankhamon Rotoloni Cigni
+140,1,0,0,0,0,82.5,4,3,1,4312,4312,71.5,0,0,1,Vittoria,Tutankhamon Rotoloni Cigni
 141,0,1,0,0,0,70.5,1,1,1,4411,4411,68.0,0,0,0,Sconfitta,The Okan
 142,1,2,0,0,0,68.0,0,0,0,442,442,66.5,0,0,0,Sconfitta,Club Atletico De San Martin De Tucuman
 143,1,0,0,0,0,77.5,2,1,0,4411,4411,70.0,1,0,0,Vittoria,S S Condom
-144,2,3,0,0,0,73.5,2,3,0,4312,4312,68.5,0,0,0,Vittoria,Hyrule's Chickens
+144,3,2,0,0,0,72.5,2,3,0,433,433,69.0,0,0,0,Vittoria,Hyrule's Chickens
 145,1,0,0,0,0,65.5,1,3,0,4222,4222,66.0,0,0,0,Sconfitta,Pro Sud Gradinata
 146,0,1,0,0,0,75.0,1,3,0,4411,4411,71.0,0,0,1,Sconfitta,Club Atletico Luigi Cadorna Milano 1896
 147,1,1,1,0,0,78.0,3,1,0,442,442,68.5,0,0,0,Vittoria,Overflow FC
@@ -153,7 +153,7 @@
 151,1,0,0,0,0,73.0,2,0,0,352,352,67.5,0,0,0,Vittoria,Tutankhamon Rotoloni Cigni
 152,0,2,0,0,0,84.5,4,1,0,4312,4312,71.5,0,0,0,Vittoria,Pro Sud Gradinata
 153,2,0,0,0,0,73.0,2,0,0,4411,4411,68.0,0,0,0,Sconfitta,The Okan
-154,0,2,0,0,0,77.5,2,0,0,4222,4222,69.5,0,0,0,Pareggio,Hyrule's Chickens
+154,0,2,0,0,0,77.5,2,0,0,4321,4321,69.5,0,0,0,Pareggio,Hyrule's Chickens
 155,3,1,0,0,0,75.0,2,1,0,442,442,67.5,0,0,1,Pareggio,Civitanova Squidfishers
 156,0,0,1,0,0,84.5,4,0,0,4411,4411,71.5,0,0,0,Pareggio,Bluefin FC
 157,2,1,1,0,0,82.0,2,0,0,4312,4312,72.0,0,0,1,Pareggio,Club Atletico De San Martin De Tucuman
@@ -169,9 +169,9 @@
 167,1,1,1,0,0,71.0,1,1,0,352,352,67.5,0,0,0,Vittoria,Bluefin FC
 168,1,1,0,0,0,76.5,2,0,0,4411,4411,70.0,0,0,0,Vittoria,The Okan
 169,1,0,0,0,0,58.0,0,0,1,4222,4222,59.0,0,0,0,Sconfitta,Overflow FC
-170,2,1,1,0,0,67.0,2,0,1,343,343,60.5,0,0,0,Sconfitta,Overflow FC
+170,2,1,1,0,0,71.5,2,0,2,343,343,65.5,0,0,0,Sconfitta,Overflow FC
 171,0,0,0,0,0,75.5,2,1,0,3421,3421,70.5,0,0,0,Vittoria,Pro Sud Gradinata
-172,0,1,0,0,0,76.5,2,0,1,4312,4312,70.0,0,0,0,Pareggio,Hyrule's Chickens
+172,0,1,0,0,0,76.0,2,0,1,4222,4222,69.5,0,0,0,Pareggio,Hyrule's Chickens
 173,0,0,0,0,0,75.0,1,0,0,4222,4222,69.0,1,0,0,Pareggio,Club Atletico Luigi Cadorna Milano 1896
 174,4,3,1,0,0,75.0,1,0,0,4411,4411,70.0,0,0,0,Vittoria,Bluefin FC
 175,1,4,0,0,0,71.5,0,2,0,4312,4312,70.0,0,0,0,Sconfitta,Tutankhamon Rotoloni Cigni

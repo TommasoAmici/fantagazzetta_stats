@@ -1,10 +1,10 @@
 # import data from disk
-classic <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_classic.csv")
-seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_seriea.csv")
-ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_ekstraklasa.csv")
-ICDQCMAS_seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_ICDQCMAS_table_seriea.csv")
-ICDQCMAS_classic <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_ICDQCMAS_table_classic.csv")
-ICDQCMAS_ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/lineups_ICDQCMAS_table_ekstraklasa.csv")
+classic <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_classic.csv")
+seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_seriea.csv")
+ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ekstraklasa.csv")
+ICDQCMAS_seriea <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_seriea.csv")
+ICDQCMAS_classic <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_classic.csv")
+ICDQCMAS_ekstraklasa <- read.csv("~/Dev/Data/fantagazzetta_stats/csvs/lineups_ICDQCMAS_table_ekstraklasa.csv")
 
 library(ggplot2)
 library(scales)
@@ -70,6 +70,8 @@ vertical.sum <- function(df){
   return(df)
 }
 ekstraklasa.vertical <- vertical.sum(ekstraklasa)
+ICDekstraklasa.vertical <- vertical.sum(ICDQCMAS_ekstraklasa)
+
 seriea.vertical <- vertical.sum(seriea)
 classic.vertical <- vertical.sum(classic)
 
