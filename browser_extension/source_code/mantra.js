@@ -313,13 +313,13 @@ function best11(lineup, modulo) {
 			}
 		}
 		// if no player fills role, apply malus
-		if (highest.fantavoto == NaN || highest.fantavoto == 0 && maxMalus < 3) {
+		if ((highest.fantavoto == NaN || highest.fantavoto == 0) && maxMalus < 2) {
 			for (var role of roles) {
 				// finds roles that can be filled with a malus
 				for (var rMalus of findRoleMalus(role, modulo)) {
 					for (player of players) {
 						for (r of player.roles) {
-							if (rMalus.includes(r) && player.fantavoto >= highest.fantavoto && bestNames.includes(player.name) == false && maxMalus < 3) {
+							if ((rMalus.includes(r) && player.fantavoto >= highest.fantavoto && bestNames.includes(player.name) == false) && maxMalus < 2) {
 								highest = player;
 								highest.malus = true;
 								maxMalus += 1;
@@ -369,6 +369,7 @@ function printBestLineup(ICDQCMASLineup, matchClass) {
 	for (p of allPlayers) {
 		$(p).addClass("bnc");
 		$(p).find("td.pt.bold").removeClass("bold");
+		$(p).find("td.tdrole").empty();
 	}
 	// finds players for ICDQCMAS lineup among all the players of the match
 	for (player of ICDQCMASLineup.players) {
@@ -382,7 +383,6 @@ function printBestLineup(ICDQCMASLineup, matchClass) {
 						$(this).addClass("bold");
 					}
 				});
-				$(p).find("td.tdrole").remove();
 				// add malus icon if necessary
 				if (player.malus) {
 					$(p).append(malusIcon);
@@ -417,6 +417,7 @@ function getICDQCMAS(matchClass) {
 	printBestLineup(ICDQCMASLineup, matchClass);
 };
 
+// create buttons and prepare html to calculate lineups
 function main() {
 	$(".table.table-striped.tbpink").each(function (i) {
 		$(this).addClass("lineup" + i);

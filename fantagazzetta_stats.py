@@ -371,13 +371,13 @@ def best11(lineup, modulo, mantra):
                     if r in role and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                         highest = player
         # if no player fills role, apply malus
-        if (highest.fantavoto is None or highest.fantavoto == 0) and max_malus < 3 and mantra:
+        if (highest.fantavoto is None or highest.fantavoto == 0) and (max_malus < 2) and mantra:
             for role in roles:
                 # finds roles that can be filled with a malus
                 for r_malus in find_role_malus(role, modulo):
                     for player in players:
                         for r in player.roles:
-                            if (r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names and max_malus < 3):
+                            if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 2):
                                 highest = player
                                 highest.malus = True
                                 max_malus += 1
@@ -477,6 +477,7 @@ def lineups_pandas(lineups, league, directory):
                        "Rigore parato": [l.get_bonus("rigore parato") for l in lineups],
                        "Malus": [l.get_bonus("malus") for l in lineups]})
     df.to_csv(directory + "lineups_{}.csv".format(league), sep=",")
+    return df
 
 
 # creates pandas data frame and writes matches to .csv
@@ -518,6 +519,7 @@ def matches_pandas(matches, league, directory):
                        "Malus casa": [m.get_bonus(m.home_players, "malus") for m in matches],
                        "Malus fuori casa": [m.get_bonus(m.away_players, "malus") for m in matches]})
     df.to_csv(directory + "matches_{}.csv".format(league), sep=",")
+    return df
 
 
 def make_sure_path_exists(path):
@@ -555,11 +557,11 @@ def main():
     # write data to .csv
     directory = os.getcwd() + "/csvs/"
     make_sure_path_exists(directory)
-    matches_pandas(matches, league, directory)
-    lineups_pandas(lineups, league, directory)
+    matches_df = matches_pandas(matches, league, directory)
+    lineups_df = lineups_pandas(lineups, league, directory)
     # calculates and prints table based on best lineups, instead of actual lineups
     best_lineups = ICDQCMAS_table(lineups, mantra)
-    lineups_pandas(best_lineups, "ICDQCMAS_table_" + league, directory)
+    lineups_ICDQCMAS_df = lineups_pandas(best_lineups, "ICDQCMAS_table_" + league, directory)
     # print best lineups
     print_best_lineups(lineups)
 

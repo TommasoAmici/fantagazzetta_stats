@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "ICDQCMAS",
 	"description": "This extension calculates the ICDQCMAS for the selected lineup in Fantagazzetta.",
-	"version": "1.0",
+	"version": "1.1.2",
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "fg_popup.html"
@@ -13,6 +13,13 @@
 		"http://leghe.fantagazzetta.com/*",
 		"https://leghe.fantagazzetta.com/*"
 	],
+	"content_scripts": [{
+		"matches": [
+			"http://leghe.fantagazzetta.com/*",
+			"https://leghe.fantagazzetta.com/*"
+		],
+		"js": ["jquery.min.js"]
+	}],
 	"background": {
 		"scripts": [
 			"jquery.min.js",
