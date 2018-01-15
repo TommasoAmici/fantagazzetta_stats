@@ -2,3 +2,5 @@ This is a tool to grab data about your fantasy football league on leghe.fantagaz
 Since there are no IDs for the league pages, you'll have to download each page.
 
 ICDQCMAS-index is a maximization protocol designed to obtain the highest yield from a limited pool of resources.
+
+The extension for Firefox is available [here](https://addons.mozilla.org/en-US/firefox/addon/icdqcmas/).
