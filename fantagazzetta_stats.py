@@ -92,9 +92,12 @@ class fg_player(object):
         self.bench = bench
         self.malus = malus
 
-    def fantavoto_no_malus(self):
+    def fantavoto_no_malus(self): 
         if self.malus == False:
-            return self.fantavoto - self.bonus.get("malus", 0)
+            try:
+                return self.fantavoto + self.bonus["malus"] * 0.5
+            except:
+                return self.fantavoto
         else:
             return self.fantavoto
 
@@ -153,13 +156,13 @@ class fg_match(object):
     # returns number of bonus for match, given home/away team
     # e.g. get_bonus(home_players, "gol fatto") returns total number of goals
     def get_bonus(self, players, bonus):
-        goals = 0
+        req_bonus = 0
         for p in players:
             if p.bench is False:
-                goals += p.bonus.get(bonus, 0)
+                req_bonus += p.bonus.get(bonus, 0)
             else:
                 continue
-        return goals
+        return req_bonus
 
 
 class fg_lineup(object):
@@ -197,13 +200,13 @@ class fg_lineup(object):
     # returns number of bonus for lineup, given home/away team
     # e.g. get_bonus(home_players, "gol fatto") returns total number of goals
     def get_bonus(self, bonus):
-        b = 0
+        req_bonus = 0
         for p in self.players:
             if p.bench is False:
-                b += p.bonus.get(bonus, 0)
+                req_bonus += p.bonus.get(bonus, 0)
             else:
                 continue
-        return b
+        return req_bonus
 
     def calculate_goals(self):
         return ((self.points - 66) // 4) + 1
