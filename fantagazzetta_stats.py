@@ -81,7 +81,6 @@ MODULICLASSIC = {
 
 class fg_player(object):
     """class to store a player's performance"""
-
     def __init__(self, name="", team="", roles=[], bonus={}, fantavoto=0, bench=False, voto=0, malus=False):
         super(fg_player, self).__init__()
         self.name = name.title()
@@ -371,16 +370,28 @@ def best11(lineup, modulo, mantra):
                     if r in role and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                         highest = player
         # if no player fills role, apply malus
-        if (highest.fantavoto is None or highest.fantavoto == 0) and (max_malus < 2) and mantra:
+        if highest.fantavoto == 0 and max_malus < 3 and mantra:
             for role in roles:
                 # finds roles that can be filled with a malus
                 for r_malus in find_role_malus(role, modulo):
                     for player in players:
                         for r in player.roles:
-                            if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 2):
-                                highest = player
-                                highest.malus = True
-                                max_malus += 1
+                            if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 3):
+                                highest.name = player.name
+                                highest.team = player.team
+                                highest.roles = player.roles
+                                highest.bonus = player.bonus
+                                highest.fantavoto = player.fantavoto
+                                highest.voto = player.voto
+                                highest.bench = player.bench
+                                if r != role:
+                                    highest.malus = True
+                                else:
+                                    highest.malus = False
+                            else:
+                                continue
+            if highest.malus:
+                max_malus += 1
         best_names.append(highest.name)
         best_players.append(highest)
         best_roles.append(role)
@@ -533,7 +544,11 @@ def make_sure_path_exists(path):
 def main():
     # prepare files to read
     league = input("Enter league (folder) name: ")
-    num_matchdays = int(input("Enter number of files: "))
+    try:
+        num_matchdays = int(input("Enter number of files: "))
+    except:
+        # max number of days in league
+        num_matchdays = 38
     mantra = input("M for Mantra, C for classic: ")
     if mantra.lower() == "c":
         mantra = False
