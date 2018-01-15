@@ -313,20 +313,33 @@ function best11(lineup, modulo) {
 			}
 		}
 		// if no player fills role, apply malus
-		if ((highest.fantavoto == NaN || highest.fantavoto == 0) && maxMalus < 2) {
+		if (highest.fantavoto == 0 && maxMalus < 3) {
 			for (var role of roles) {
 				// finds roles that can be filled with a malus
 				for (var rMalus of findRoleMalus(role, modulo)) {
-					for (player of players) {
-						for (r of player.roles) {
-							if ((rMalus.includes(r) && player.fantavoto >= highest.fantavoto && bestNames.includes(player.name) == false) && maxMalus < 2) {
-								highest = player;
-								highest.malus = true;
-								maxMalus += 1;
+					for (var player of players) {
+						for (var r of player.roles) {
+							if (rMalus.includes(r) && player.fantavoto >= highest.fantavoto && bestNames.includes(player.name) == false) {
+								highest.name = player.name
+                                highest.team = player.team
+                                highest.roles = player.roles
+                                highest.bonuses = player.bonuses
+                                highest.fantavoto = player.fantavoto
+                                highest.voto = player.voto
+                                highest.bench = player.bench
+                                if (r != role) {
+									highest.malus = true
+								}
+                                else {
+									highest.malus = false
+								}
 							}
 						}
 					}
 				}
+			}
+			if (highest.malus) {
+				maxMalus += 1;
 			}
 		}
 		bestNames.push(highest.name);
@@ -364,6 +377,7 @@ function printBestLineup(ICDQCMASLineup, matchClass) {
 	var playersNames = [];
 	for (p of ICDQCMASLineup.players){
 		playersNames.push(p.name);
+		console.log(p.name, p.malus);
 	}
 	// set css to default
 	for (p of allPlayers) {
@@ -381,10 +395,12 @@ function printBestLineup(ICDQCMASLineup, matchClass) {
 				$(p).find("td.pt").each(function(i){
 					if (i == 2) {
 						$(this).addClass("bold");
+						$(this).text(player.noMalus);
 					}
 				});
 				// add malus icon if necessary
 				if (player.malus) {
+					console.log("malus");
 					$(p).append(malusIcon);
 				}
 			}

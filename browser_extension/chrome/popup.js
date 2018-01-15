@@ -10,7 +10,7 @@ function contentScriptClassic() {
   }
 // load jquery to use in content scripts
 chrome.tabs.executeScript({
-  file: "jquery.min.js"
+  file: "jquery-3.2.1.min.js"
 });
 console.log("ICDQCMAS loaded jquery");
 document.getElementById("button-mantra").addEventListener("click", contentScriptMantra);
