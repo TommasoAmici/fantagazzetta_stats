@@ -373,28 +373,29 @@ def best11(lineup, modulo, mantra):
                     if r in role and player.fantavoto >= highest.fantavoto and player.name not in best_names:
                         highest = player
         # if no player fills role, apply malus
-        if highest.fantavoto == 0 and max_malus < 3 and mantra:
-            for role in roles:
-                # finds roles that can be filled with a malus
-                for r_malus in find_role_malus(role, modulo):
-                    for player in players:
-                        for r in player.roles:
-                            if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 3):
-                                highest.name = player.name
-                                highest.team = player.team
-                                highest.roles = player.roles
-                                highest.bonus = player.bonus
-                                highest.fantavoto = player.fantavoto
-                                highest.voto = player.voto
-                                highest.bench = player.bench
-                                if r != role:
-                                    highest.malus = True
+        if mantra:
+            if highest.fantavoto == 0 and max_malus < 3:
+                for role in roles:
+                    # finds roles that can be filled with a malus
+                    for r_malus in find_role_malus(role, modulo):
+                        for player in players:
+                            for r in player.roles:
+                                if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 3):
+                                    highest.name = player.name
+                                    highest.team = player.team
+                                    highest.roles = player.roles
+                                    highest.bonus = player.bonus
+                                    highest.fantavoto = player.fantavoto
+                                    highest.voto = player.voto
+                                    highest.bench = player.bench
+                                    if r != role:
+                                        highest.malus = True
+                                    else:
+                                        highest.malus = False
                                 else:
-                                    highest.malus = False
-                            else:
-                                continue
-            if highest.malus:
-                max_malus += 1
+                                    continue
+                if highest.malus:
+                    max_malus += 1
         best_names.append(highest.name)
         best_players.append(highest)
         best_roles.append(role)
@@ -404,6 +405,7 @@ def best11(lineup, modulo, mantra):
 
 # finds best modulo for given lineup
 def best_lineup(lineup, moduli, mantra):
+    print(mantra)
     highest_score = 0
     best_11 = []
     best_modulo = ""
@@ -425,7 +427,7 @@ def print_best_lineup(lineup, moduli, mantra):
     print(best_11, "\n\n")
 
 
-def print_best_lineups(lineups, mantra=True):
+def print_best_lineups(lineups, mantra):
     matchday = 1
     loop_count = 0
     for l in lineups:
@@ -447,7 +449,7 @@ def pairwise(iterable):
 
 
 # calculates and prints table based on best lineups, instead of actual lineups
-def ICDQCMAS_table(lineups, mantra=True):
+def ICDQCMAS_table(lineups, mantra):
     # calcuates best lineup for each match
     if mantra:
         lineups = [best_lineup(l, MODULIMANTRA, mantra) for l in lineups]
@@ -581,7 +583,7 @@ def main():
     best_lineups = ICDQCMAS_table(lineups, mantra)
     lineups_ICDQCMAS_df = lineups_pandas(best_lineups, "ICDQCMAS_table_" + league, directory)
     # print best lineups
-    print_best_lineups(lineups)
+    print_best_lineups(lineups, mantra)
 
 
 main()
