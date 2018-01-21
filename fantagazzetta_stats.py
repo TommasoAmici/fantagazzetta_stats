@@ -150,7 +150,7 @@ def find_role_malus(role, formation):
 
 
 # copies value from fg_player object A to B
-def clone_player(highest, player):
+def clone_player(highest, player, r, role):
     highest.name = player.name
     highest.team = player.team
     highest.roles = player.roles
@@ -195,7 +195,7 @@ def best11(lineup, formation, mantra):
                         for player in players:
                             for r in player.roles:
                                 if ((r in r_malus and player.fantavoto >= highest.fantavoto and player.name not in best_names) and max_malus < 3):
-                                    highest = clone_player(highest, player)
+                                    highest = clone_player(highest, player, r, role)
                                 else:
                                     continue
                 if highest.malus:
@@ -405,3 +405,7 @@ def main():
     matches_df, lineups_df, lineups_ICDQCMAS_df = write_to_csv(matches, lineups, league, mantra)
     # print best lineups to screen
     print_best_lineups(lineups, mantra)
+
+
+main()
+
